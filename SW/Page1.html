@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+    <head>
+        <title>Title</title>
+        <style>
+            @font-face {
+                font-family: "basic_font_1";
+                src: url(FONT_FILE/ELAND_M.ttf);
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                font-family: "basic_font_1";
+                text-align: center;
+                margin: 0px;
+                overflow-X: hidden;
+            }
+            #mainframe_r{
+                text-align: center;
+                z-index: -100;
+                max-width: 100%;
+                height: auto;
+                top: 75px;
+                opacity: 0.7;
+            }
+            #top_bar{
+                width: 100%;
+                height: 75px;
+            }
+            #top_logo{
+                width: 80px;
+                height: auto;
+                position: absolute;
+                top: 20px;
+                left: 100px;
+            }
+            #top_logo2{
+                width: auto;
+                height: 30px;
+                position: absolute;
+                top: 20px;
+                right: 80px;
+            }
+            #top_menu{
+                text-align: center
+            }
+            a:hover{
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.25s;
+            }
+            a{
+                padding-left: 50px;
+                text-align: center;
+                text-decoration: none;
+                color: darkslateblue;
+                transition: 0.4s;
+            }
+            body{
+                line-height: 23px;
+            }
+            #wise_saying{
+                width: 400px;
+                position: absolute;
+                top: 150px;
+                left: 37.6%;
+            }
+            #graph{
+                width: 450px;
+                position: absolute;
+                top: 118px;
+                left: 280px;
+            }
+            .img_card{
+                width: 19%;
+                z-index: 1;
+            }
+            #product_main{
+                height: 650px;
+            }
+            .product_cls{
+                width: 19%;
+            }
+            .symbol{
+                width: 35%;
+                z-index: -50;
+                opacity: 0.5;
+                position: absolute;
+            }
+            #sym1{
+                left: -8%;
+                transform :rotate(-50deg);
+                top: 2350px;
+            }
+            #sym2{
+                right: -8%;
+                transform :rotate(130deg);
+                top: 2400px;
+            }
+            .dona{
+                width: 19%;
+            }
+            .camp_dona{
+                width: 49%;
+            }
+            #foot{
+                background-color: rgb(0, 30, 47);
+                height: 320px;
+                color:white;
+                font-size: 50px;
+            }
+            #foot_logo{
+                width: 19%;
+            }
+            #upcycling{
+                background-color: rgb(242,242,240);
+                padding-top: 45px;
+            }
+            #product_list{
+                margin-top: 60px;
+                margin-bottom: 60px;
+                height: 51%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top_bar">
+            <img src="IMG_FILE/typo.png" id="top_logo">
+            <img src="IMG_FILE/typo2.png" id="top_logo2">
+            <div id="top_menu">
+                <br>
+                <span><a href="#product_main">PRODUCT</a></span>
+                <span><a href="#upcycling">RECYCLING</a></span>
+                <span><a href="#donate">SPONSER</a></span>
+                <span><a href="#reus">RE:US?</a></span>
+            </div>
+        </div>
+        <div id="main">
+            <img src="IMG_FILE/back.jpg" id="mainframe_r">
+            <img src='IMG_FILE/명언.png' id="wise_saying">
+        
+        </div><br>
+        <div id="product_main">
+            <img src='IMG_FILE/product.png' class="product_cls"><br>
+            <img src='IMG_FILE/product_list.png' id="product_list" 
+            onmouseover="can_pro_mous_move=1; pro_mou_move(event);" onmouseout="can_pro_mous_move=0">
+            <img src='IMG_FILE/더보기버튼.png' style="width: 10%;">
+        </div>
+        <div id="upcycling">
+            <img src="IMG_FILE/recycling.png" class="img_card"><br>
+            <img src='IMG_FILE/비닐.png'  class="img_card" id="vin">
+            <img src='IMG_FILE/유리병.png'  class="img_card" id="glass">
+            <img src='IMG_FILE/전지.png' class="img_card" id="elec"><br>
+            <img src='IMG_FILE/종이.png' class="img_card" id="paper">
+            <img src='IMG_FILE/재활용.png' class="img_card" style="opacity: 10%">
+            <img src='IMG_FILE/캔.png' class="img_card" id="캔" ><br>
+            <img src='IMG_FILE/폐전가전제품.png' class="img_card" id="house_elec">
+            <img src='IMG_FILE/플라스틱.png' class="img_card" id="plastic">
+            <img src='IMG_FILE/형광등.png' class="img_card" id="light">
+            <div style="height: 80px;"></div>
+        </div>
+        <div id="donate">
+            <img src='IMG_FILE/sponsor.png' class="dona"><br>
+            <img src='IMG_FILE/cam_with.png' class="camp_dona">
+            <div style="height: 30px;"></div>
+            <img src='IMG_FILE/to_donate.png' class="camp_dona">
+            <img src='IMG_FILE/symbol1.png' class="symbol" id="sym1">
+            <img src='IMG_FILE/symbol1.png' class="symbol" id="sym2">
+            <div style="height: 110px;"></div>
+        </div>
+        <div id="foot">
+            <div style="height: 20px;"></div>
+            <img src='IMG_FILE/foot_logo.png' id="foot_logo">
+            <div style="height: 50px;"></div>
+            <div style="font-size: 30px;">
+                1.8학년
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var can_pro_mous_move=0;
+    function pro_mou_move(event){
+        setInterval(function (){
+            if(can_pro_mous_move){
+                if(event.clientX<=0.5*screen.width){
+                $('#product_list').offset({left : $('#product_list').offset().left-5});
+                }
+                else{
+                    $('#product_list').offset({left : $('#product_list').offset().left+5});
+                }
+            }
+        },10);
+    }
+</script>
