@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+    <head>
+        <title>REUS</title>
+        <style>
+            @font-face {
+                font-family: "basic_font_1";
+                src: url(FONT_FILE/ELAND_M.ttf);
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                font-family: "basic_font_1";
+                text-align: center;
+                margin: 0px;
+                overflow-X: hidden;
+            }
+            #mainframe_r{
+                text-align: center;
+                z-index: -100;
+                max-width: 100%;
+                height: auto;
+                top: 75px;
+                opacity: 0.7;
+            }
+            #top_bar{
+                width: 100%;
+                height: 75px;
+            }
+            #top_logo{
+                width: 80px;
+                height: auto;
+                position: absolute;
+                top: 20px;
+                left: 100px;
+            }
+            #top_logo2{
+                width: auto;
+                height: 30px;
+                position: absolute;
+                top: 20px;
+                right: 80px;
+            }
+            #top_menu{
+                text-align: center
+            }
+            a:hover{
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.25s;
+            }
+            a{
+                padding-left: 50px;
+                text-align: center;
+                text-decoration: none;
+                color: darkslateblue;
+                transition: 0.4s;
+            }
+            body{
+                line-height: 23px;
+            }
+            #wise_saying{
+                width: 400px;
+                position: absolute;
+                top: 150px;
+                left: 37.6%;
+            }
+            #graph{
+                width: 450px;
+                position: absolute;
+                top: 118px;
+                left: 280px;
+            }
+            .img_card{
+                width: 19%;
+                z-index: 1;
+            }
+            #product_main{
+                height: 880px;
+            }
+            .product_cls{
+                width: 19%;
+            }
+            .symbol{
+                width: 35%;
+                z-index: -50;
+                opacity: 0.5;
+                position: absolute;
+            }
+            #sym1{
+                left: -8%;
+                transform :rotate(-50deg);
+                top: 2250px;
+            }
+            #sym2{
+                right: -8%;
+                transform :rotate(130deg);
+                top: 2300px;
+            }
+            .dona{
+                width: 19%;
+            }
+            .camp_dona{
+                width: 49%;
+            }
+            #foot{
+                background-color: rgb(0, 30, 47);
+                height: 320px;
+                color:white;
+                font-size: 50px;
+            }
+            #foot_logo{
+                width: 19%;
+            }
+            #upcycling{
+                background-color: rgb(242,242,240);
+                padding-top: 45px;
+            }
+            #product_list{
+                margin-top: 20px;
+                margin-bottom: 70px;
+                height: 300px;
+            }
+            #graph_r{
+                margin-top: 70px;
+                margin-bottom: 70px;
+                width: 39%;
+            }
+            #point1{
+                width: 3%;
+                margin-right: 40px;
+                padding-bottom: 90px;
+            }
+            #point2{
+                width: 3%;
+                margin-left: 40px;
+                padding-bottom: 90px;
+            }
+            .prodc_rt{
+                width: 12%;
+            }
+            #pro2{
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            #pro1,#pro3{
+                padding-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top_bar">
+            <img src="IMG_FILE/typo.png" id="top_logo">
+            <img src="IMG_FILE/typo2.png" id="top_logo2">
+            <div id="top_menu">
+                <br>
+                <span><a href="#product_main">PRODUCT</a></span>
+                <span><a href="#upcycling">RECYCLING</a></span>
+                <span><a href="#donate">SPONSER</a></span>
+                <span><a href="#reus">RE:US?</a></span>
+            </div>
+        </div>
+        <div id="main">
+            <img src="IMG_FILE/back.jpg" id="mainframe_r">
+            <img src='IMG_FILE/명언.png' id="wise_saying">
+        
+        </div><br>
+        <div id="product_main">
+            <img src='IMG_FILE/l.png' id="point1" onclick="clic_point(-1);">
+            <img src='IMG_FILE/gr2.png' id='graph_r'>
+            <img src='IMG_FILE/r.png' id="point2" onclick="clic_point(1);"><br>
+            <img src='IMG_FILE/product.png' class="img_card"><br>
+            <a href='https://mdri.kr/product/detail.html?product_no=22&cafe_mkt=google_dy&gclid=Cj0KCQjw4eaJBhDMARIsANhrQADbN1NLsdhm-QyrsWbPGkaPFfCP7l26k0fHwBf3QCvpQ37dPYZGil4aAksqEALw_wcB'><img src='IMG_FILE/pro_1.PNG' class="prodc_rt" id="pro1"></a>
+            <a href='https://kr.iherb.com/pr/grab-green-stoneworks-laundry-detergent-pods-oak-tree-50-loads-1-65-lbs-750-g/80198?gclid=Cj0KCQjw4eaJBhDMARIsANhrQABUEdWqO4baRiBVIH9IfuaDVSl4ZaOZh1Rol3fR9dOvj9e20wyzNF0aAtEXEALw_wcB&gclsrc=aw.ds'><img src='IMG_FILE/pro_2.png' class="prodc_rt" id="pro2"></a>
+            <a href='https://www.bubuteahouse.com/22/?idx=169&gclid=Cj0KCQjw4eaJBhDMARIsANhrQAAEFo4G3mTzAzypfFA07TYQ0Yd-ERXbbRXtKm-kT2P2sa72po8kntUaAinDEALw_wcB'><img src='IMG_FILE/pro_3.PNG' class="prodc_rt" id="pro3"></a>
+        </div>
+        <div id="upcycling">
+            <img src="IMG_FILE/recycling.png" class="img_card"><br>
+            <img src='IMG_FILE/product_list.png' id="product_list"
+            onmouseover="ismouse_on=1;" onmouseleave="ismouse_on=0;">
+        </div>
+        <div id="donate">
+            <img src='IMG_FILE/sponsor.png' class="dona" style="margin-top: 50px; margin-bottom: 50px;"><br>
+            <img src='IMG_FILE/cam_with.png' class="camp_dona">
+            <div style="height: 30px;"></div>
+            <img src='IMG_FILE/to_donate.png' class="camp_dona">
+            <img src='IMG_FILE/symbol1.png' class="symbol" id="sym1">
+            <img src='IMG_FILE/symbol1.png' class="symbol" id="sym2">
+            <div style="height: 110px;"></div>
+        </div>
+        <div id="foot">
+            <div style="height: 20px;"></div>
+            <img src='IMG_FILE/foot_logo.png' id="foot_logo">
+            <div style="height: 50px;"></div>
+            <div style="font-size: 15px;">
+                1.8학년<br><br><br>
+                김민주 김도완 김예진 정유환 임동빈
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var pos_mous_loc=0;
+    var ismouse_on=0;
+    const _sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+    $('body').mousemove(function(e){
+        pos_mous_loc=e.pageX;
+    });
+    setInterval(function(){
+        dx=(-pos_mous_loc+screen.width/2)*0.007;
+        if(ismouse_on){
+            if($('#product_list').offset().left>0){$('#product_list').offset({left : 0});}
+            else if($('#product_list').offset().left <=-6000) $('#product_list').offset({left : -6000});
+            else $('#product_list').offset({left : $('#product_list').offset().left+dx});
+        }
+    },10);
+    function clic_point(num){
+        var num_k=Number($("#graph_r").attr('src')[11]);
+        var S=num+num_k;
+        if(S>=1 && S<=3){
+            const grap=async()=>{
+                $('#graph_r').css({'opacity' : 0.8},1000);
+                await _sleep(1001);
+                $("#graph_r").attr({'src' : 'IMG_FILE/gr'+S+'.png'});
+                $('#graph_r').css({'opacity' : 1},1000);
+            }
+            $("#graph_r").attr({'src' : 'IMG_FILE/gr'+S+'.png'});
+        }
+    }
+</script>
